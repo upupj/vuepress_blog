@@ -9,7 +9,7 @@ sticky: 10
 
 # Sticky Article with Higher Priority
 
-Excerpt information which is added manually.
+Excerpt information which is added manually 1.
 
 <!-- more -->
 

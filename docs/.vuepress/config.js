@@ -4,32 +4,29 @@ import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 
 export default defineUserConfig({
-  lang: "en-US",
-  title: "VuePress",
+  lang: "zh-CN",
+  title: "jim's Blog",
   description: "My first VuePress Site",
   dest: "./dist",
-
   theme: defaultTheme({
     logo: "https://vuejs.press/images/hero.png",
-
     navbar: [
-      "/",
       {
-        text: "Article",
+        text: "文章",
         link: "/article/",
       },
-      {
-        text: "Category",
-        link: "/category/",
-      },
-      {
-        text: "Tag",
-        link: "/tag/",
-      },
-      {
-        text: "Timeline",
-        link: "/timeline/",
-      },
+      // {
+      //   text: "Category",
+      //   link: "/category/",
+      // },
+      // {
+      //   text: "Tag",
+      //   link: "/tag/",
+      // },
+      // {
+      //   text: "Timeline",
+      //   link: "/timeline/",
+      // },
     ],
   }),
 
