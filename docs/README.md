@@ -12,7 +12,7 @@ actions:
     type: secondary
 
 features:
-  - title: Simplicity First1
+  - title: Simplicity First2
     details: Minimal setup with markdown-centered project structure helps you focus on writing.
   - title: Vue-Powered
     details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
