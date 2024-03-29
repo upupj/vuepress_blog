@@ -15,21 +15,24 @@ export default defineUserConfig({
         text: "文章",
         link: "/article/",
       },
-      // {
-      //   text: "Category",
-      //   link: "/category/",
-      // },
-      // {
-      //   text: "Tag",
-      //   link: "/tag/",
-      // },
-      // {
-      //   text: "Timeline",
-      //   link: "/timeline/",
-      // },
+      {
+        text: "面试题",
+        link: "/interview/",
+      },
+      {
+        text: "Category",
+        link: "/category/",
+      },
+      {
+        text: "Tag",
+        link: "/tag/",
+      },
+      {
+        text: "Timeline",
+        link: "/timeline/",
+      },
     ],
   }),
-
   plugins: [
     blogPlugin({
       // Only files under posts are articles
@@ -116,19 +119,33 @@ export default defineUserConfig({
             );
           },
         },
+        // {
+        //   key: "timeline",
+        //   // Only article with date should be added to timeline
+        //   filter: (page) => page.frontmatter.date instanceof Date,
+        //   // Sort pages with time
+        //   sorter: (pageA, pageB) =>
+        //     new Date(pageB.frontmatter.date).getTime() -
+        //     new Date(pageA.frontmatter.date).getTime(),
+        //   layout: "Timeline",
+        //   frontmatter: () => ({
+        //     title: "Timeline",
+        //     sidebar: false,
+        //   }),
+        // },
         {
-          key: "timeline",
+          key: "interview",
           // Only article with date should be added to timeline
-          filter: (page) => page.frontmatter.date instanceof Date,
+          filter: (page) => page.frontmatter.type === "interview",
           // Sort pages with time
           sorter: (pageA, pageB) =>
             new Date(pageB.frontmatter.date).getTime() -
             new Date(pageA.frontmatter.date).getTime(),
-          layout: "Timeline",
-          frontmatter: () => ({
-            title: "Timeline",
-            sidebar: false,
-          }),
+          layout: "Interview",
+          // frontmatter: () => ({
+          //   title: "Timeline",
+          //   sidebar: false,
+          // }),
         },
       ],
       hotReload: true,
